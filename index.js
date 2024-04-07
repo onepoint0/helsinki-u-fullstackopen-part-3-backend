@@ -6,10 +6,10 @@ const morgan = require('morgan')
 morgan.token('body',(req) => JSON.stringify(req.body))
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'))
 
-// const cors = require('cors') // unnecessary if serving front end from backend
-// app.use(cors())
+const cors = require('cors') // unnecessary if serving front end from backend
+app.use(cors())
 
-app.use(express.static('dist'))
+// app.use(express.static('dist'))
 
 let phoneBook = [
     { 
@@ -77,7 +77,9 @@ app.post('/api/persons',(req,res) => {
       "number": body.number
     }
 
-    return res.json(phoneBook.concat(person))
+    phoneBook = phoneBook.concat(person)
+
+    return res.json(person)
 })
 
 app.get('/info',(req,res) => {
