@@ -15,6 +15,6 @@ Content-Type: application/json
 
 { 
     "id": 1,
-    "name": "Arto Hellas1", 
-    "number": "040-1234562"
+    "name": "Arto Hella", 
+    "number": "040-12345623"
 }
