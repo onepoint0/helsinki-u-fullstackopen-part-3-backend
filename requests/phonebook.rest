@@ -7,14 +7,22 @@ GET http://localhost:3001/info
 GET http://localhost:3001/api/persons/5
 
 ###
-DELETE http://localhost:3001/api/persons/3
+DELETE http://localhost:3001/api/persons/6615a507fded5b8acd6205b0
+
+###
+PUT http://localhost:3001/api/persons/661afbd25dbad00c41e2c5c9
+Content-Type: application/json
+
+{ 
+    "name": "a", 
+    "number": "put request"
+}
 
 ###
 POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 { 
-    "id": 1,
-    "name": "Arto Hella", 
-    "number": "040-12345623"
+    "name": "aas", 
+    "number": "040-123456232"
 }
